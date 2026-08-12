@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E7495EEA-4727-41A3-BE8E-34B6F55F44E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Industrial.Asrs.Domain", "src\Industrial.Asrs.Domain\Industrial.Asrs.Domain.csproj", "{D1B1421D-0951-4D9B-BC4E-447755192539}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Industrial.Asrs.Infrastructure", "src\Industrial.Asrs.Infrastructure\Industrial.Asrs.Infrastructure.csproj", "{CC102C58-FC75-4559-94AE-9BD744EEA2F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Industrial.Asrs.Api", "src\Industrial.Asrs.Api\Industrial.Asrs.Api.csproj", "{4486A47E-051F-450C-B986-97B0C810D25D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DCCC3234-9B07-4B20-ADAD-EECF86831F9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Industrial.Asrs.Tests", "tests\Industrial.Asrs.Tests\Industrial.Asrs.Tests.csproj", "{952891A1-F843-4411-A6C6-A530D96FDDBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1B1421D-0951-4D9B-BC4E-447755192539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B1421D-0951-4D9B-BC4E-447755192539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B1421D-0951-4D9B-BC4E-447755192539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B1421D-0951-4D9B-BC4E-447755192539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC102C58-FC75-4559-94AE-9BD744EEA2F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC102C58-FC75-4559-94AE-9BD744EEA2F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC102C58-FC75-4559-94AE-9BD744EEA2F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC102C58-FC75-4559-94AE-9BD744EEA2F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4486A47E-051F-450C-B986-97B0C810D25D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4486A47E-051F-450C-B986-97B0C810D25D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4486A47E-051F-450C-B986-97B0C810D25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4486A47E-051F-450C-B986-97B0C810D25D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{952891A1-F843-4411-A6C6-A530D96FDDBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{952891A1-F843-4411-A6C6-A530D96FDDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{952891A1-F843-4411-A6C6-A530D96FDDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{952891A1-F843-4411-A6C6-A530D96FDDBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D1B1421D-0951-4D9B-BC4E-447755192539} = {E7495EEA-4727-41A3-BE8E-34B6F55F44E5}
+		{CC102C58-FC75-4559-94AE-9BD744EEA2F0} = {E7495EEA-4727-41A3-BE8E-34B6F55F44E5}
+		{4486A47E-051F-450C-B986-97B0C810D25D} = {E7495EEA-4727-41A3-BE8E-34B6F55F44E5}
+		{952891A1-F843-4411-A6C6-A530D96FDDBB} = {DCCC3234-9B07-4B20-ADAD-EECF86831F9F}
+	EndGlobalSection
+EndGlobal
