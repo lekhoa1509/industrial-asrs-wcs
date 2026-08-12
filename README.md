@@ -76,7 +76,7 @@ ERP / WMS
 
 ## What The Demo Shows
 
-- 2D warehouse grid split into Zone A and Zone B
+- 12-rail warehouse map: Rail 1–5 in Zone A, Rail 6 as the charging corridor, and Rail 7–12 in Zone B
 - two independently moving shuttles
 - live shuttle position and device state
 - active shortest path highlighted on the grid
@@ -104,7 +104,7 @@ public interface IShuttleDevice : IAutomationDevice
 
 ### Nearest-shuttle dispatching
 
-The dispatcher selects the nearest idle shuttle to the pickup position using weighted Manhattan distance. Zone crossing is more expensive than aisle or level movement.
+The dispatcher selects the nearest idle shuttle to the pickup position using rail-and-level travel distance. Cross-zone movements naturally pass Rail 6, the shared charging and transfer corridor.
 
 **Why:** predictable O(n) selection, easy to explain, and appropriate for a small shuttle fleet.
 
@@ -112,7 +112,7 @@ The dispatcher selects the nearest idle shuttle to the pickup position using wei
 
 ### Shortest-path planning
 
-The grid planner produces deterministic routes through zone, aisle, and level coordinates. The visualization consumes the same path used by the device.
+The topology planner produces deterministic routes through rail and block-level coordinates. A shuttle leaves its storage rail, moves along the pink main corridor, crosses Rail 6 when necessary, and enters the destination rail. The visualization consumes the same path used by the device.
 
 **Why:** domain behavior is visible and testable without PLC hardware.
 

@@ -7,8 +7,8 @@ builder.Services.ConfigureHttpJsonOptions(options =>
     options.SerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 builder.Services.AddSingleton<GridPathPlanner>();
-builder.Services.AddSingleton<IShuttleDevice>(_ => new SimulatedShuttle("SH-01", new(Zone.A, 1, 1), seed: 11));
-builder.Services.AddSingleton<IShuttleDevice>(_ => new SimulatedShuttle("SH-02", new(Zone.B, 8, 4), seed: 22));
+builder.Services.AddSingleton<IShuttleDevice>(_ => new SimulatedShuttle("SH-01", new(Zone.A, 1, 0), seed: 11));
+builder.Services.AddSingleton<IShuttleDevice>(_ => new SimulatedShuttle("SH-02", new(Zone.B, 12, 0), seed: 22));
 builder.Services.AddSingleton<WarehouseControlSystem>();
 
 WebApplication app = builder.Build(); app.UseCors();
