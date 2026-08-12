@@ -11,7 +11,7 @@ services:
     build:
       context: src/industrial-asrs-web
       args:
-        VITE_API_URL: http://localhost:8080
+        VITE_API_URL: http://127.0.0.1:8080
     ports:
       - "3000:80"
     depends_on:

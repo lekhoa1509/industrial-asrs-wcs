@@ -16,7 +16,25 @@ cd industrial-asrs-wcs
 docker compose up --build
 ```
 
-Open **http://localhost:3000**, press **Create order**, and watch the WCS select a shuttle, highlight the route, and execute the movement. No PLC hardware is required.
+Open **http://127.0.0.1:3000**, press **Create order**, and watch the WCS select a shuttle, highlight the route, and execute the movement. No PLC hardware is required.
+
+### Windows note: `localhost` does not connect
+
+No additional project setup is required. On some Windows, Edge, VPN, proxy, or Docker Desktop configurations, `localhost` may resolve through IPv6 while Docker Desktop exposes the published port through IPv4. Use these addresses instead:
+
+```text
+Dashboard: http://127.0.0.1:3000
+API:       http://127.0.0.1:8080/health
+```
+
+You can verify the containers and ports with:
+
+```powershell
+docker compose ps
+curl.exe http://127.0.0.1:8080/health
+```
+
+If `localhost` works on another machine, both forms are valid; `127.0.0.1` is documented because it is more predictable on Docker Desktop for Windows.
 
 ## The Problem
 

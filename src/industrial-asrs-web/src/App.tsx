@@ -5,7 +5,7 @@ type Position = { zone: 'A' | 'B'; aisle: number; level: number }
 type Device = { deviceId: string; driver: string; state: string; position: Position; activeOrderId?: string; error?: string }
 type Order = { orderId: string; source: Position; destination: Position }
 type Snapshot = { devices: Device[]; queue: Order[]; events: { timestamp: string; message: string }[]; completed: number; failed: number; activePath: Position[] }
-const api = import.meta.env.VITE_API_URL ?? 'http://localhost:8080'
+const api = import.meta.env.VITE_API_URL ?? 'http://127.0.0.1:8080'
 
 const cellKey = (p: Position) => `${p.zone}-${p.aisle}-${p.level}`
 const randomPosition = (): Position => ({ zone: Math.random() > .5 ? 'A' : 'B', aisle: 1 + Math.floor(Math.random() * 8), level: 1 + Math.floor(Math.random() * 5) })

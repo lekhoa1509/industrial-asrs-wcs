@@ -1,7 +1,10 @@
 using Industrial.Asrs.Domain;
 using Industrial.Asrs.Infrastructure;
+using System.Text.Json.Serialization;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+builder.Services.ConfigureHttpJsonOptions(options =>
+    options.SerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 builder.Services.AddSingleton<GridPathPlanner>();
 builder.Services.AddSingleton<IShuttleDevice>(_ => new SimulatedShuttle("SH-01", new(Zone.A, 1, 1), seed: 11));
